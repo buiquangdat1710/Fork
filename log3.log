@@ -1,0 +1,30 @@
+Training LSTM model...
+Using device:  cuda
+Training LSTM model...
+Epoch [1/200], Train Loss: 0.6922, Train Accuracy: 0.5442, Val Loss: 0.6747, Val Accuracy: 0.5684, Val Precision: 0.5543, Val Recall: 0.3203, Val F1: 0.4060
+Epoch [2/200], Train Loss: 0.6816, Train Accuracy: 0.5505, Val Loss: 0.6717, Val Accuracy: 0.5584, Val Precision: 0.5233, Val Recall: 0.4591, Val F1: 0.4891
+Epoch [3/200], Train Loss: 0.6761, Train Accuracy: 0.5529, Val Loss: 0.6739, Val Accuracy: 0.5683, Val Precision: 0.5539, Val Recall: 0.3207, Val F1: 0.4062
+Epoch [4/200], Train Loss: 0.6732, Train Accuracy: 0.5595, Val Loss: 0.6762, Val Accuracy: 0.5761, Val Precision: 0.5652, Val Recall: 0.3446, Val F1: 0.4281
+Epoch [5/200], Train Loss: 0.6682, Train Accuracy: 0.5642, Val Loss: 0.6795, Val Accuracy: 0.5684, Val Precision: 0.5975, Val Recall: 0.1924, Val F1: 0.2910
+Epoch [6/200], Train Loss: 0.6660, Train Accuracy: 0.5600, Val Loss: 0.6729, Val Accuracy: 0.5825, Val Precision: 0.5912, Val Recall: 0.3029, Val F1: 0.4005
+Epoch [7/200], Train Loss: 0.6660, Train Accuracy: 0.5569, Val Loss: 0.6685, Val Accuracy: 0.5814, Val Precision: 0.5435, Val Recall: 0.5688, Val F1: 0.5558
+Epoch [8/200], Train Loss: 0.6598, Train Accuracy: 0.5655, Val Loss: 0.6671, Val Accuracy: 0.5778, Val Precision: 0.5283, Val Recall: 0.7754, Val F1: 0.6284
+Epoch [9/200], Train Loss: 0.6597, Train Accuracy: 0.5665, Val Loss: 0.6668, Val Accuracy: 0.5829, Val Precision: 0.5344, Val Recall: 0.7317, Val F1: 0.6177
+Epoch [10/200], Train Loss: 0.6591, Train Accuracy: 0.5672, Val Loss: 0.6655, Val Accuracy: 0.5910, Val Precision: 0.5531, Val Recall: 0.5815, Val F1: 0.5669
+Epoch [11/200], Train Loss: 0.6643, Train Accuracy: 0.5500, Val Loss: 0.6718, Val Accuracy: 0.5730, Val Precision: 0.5281, Val Recall: 0.6828, Val F1: 0.5956
+Epoch [12/200], Train Loss: 0.6599, Train Accuracy: 0.5702, Val Loss: 0.6702, Val Accuracy: 0.5869, Val Precision: 0.5683, Val Recall: 0.4281, Val F1: 0.4883
+Epoch [13/200], Train Loss: 0.6638, Train Accuracy: 0.5491, Val Loss: 0.6757, Val Accuracy: 0.5785, Val Precision: 0.5345, Val Recall: 0.6562, Val F1: 0.5891
+Epoch [14/200], Train Loss: 0.6612, Train Accuracy: 0.5520, Val Loss: 0.6710, Val Accuracy: 0.5769, Val Precision: 0.5675, Val Recall: 0.3406, Val F1: 0.4257
+Epoch [15/200], Train Loss: 0.6607, Train Accuracy: 0.5491, Val Loss: 0.6714, Val Accuracy: 0.5767, Val Precision: 0.5704, Val Recall: 0.3267, Val F1: 0.4155
+Epoch [16/200], Train Loss: 0.6598, Train Accuracy: 0.5550, Val Loss: 0.6676, Val Accuracy: 0.5825, Val Precision: 0.5454, Val Recall: 0.5608, Val F1: 0.5530
+Epoch [17/200], Train Loss: 0.6563, Train Accuracy: 0.5687, Val Loss: 0.6706, Val Accuracy: 0.5783, Val Precision: 0.5801, Val Recall: 0.3052, Val F1: 0.4000
+Epoch [18/200], Train Loss: 0.6555, Train Accuracy: 0.5740, Val Loss: 0.6711, Val Accuracy: 0.5829, Val Precision: 0.5735, Val Recall: 0.3676, Val F1: 0.4481
+Epoch [19/200], Train Loss: 0.6585, Train Accuracy: 0.5684, Val Loss: 0.6662, Val Accuracy: 0.5950, Val Precision: 0.5687, Val Recall: 0.4984, Val F1: 0.5312
+Epoch [20/200], Train Loss: 0.6568, Train Accuracy: 0.5686, Val Loss: 0.6727, Val Accuracy: 0.5760, Val Precision: 0.6102, Val Recall: 0.2190, Val F1: 0.3223
+Epoch [21/200], Train Loss: 0.6544, Train Accuracy: 0.5730, Val Loss: 0.6716, Val Accuracy: 0.5910, Val Precision: 0.5656, Val Recall: 0.4813, Val F1: 0.5201
+Epoch [22/200], Train Loss: 0.6549, Train Accuracy: 0.5600, Val Loss: 0.6737, Val Accuracy: 0.5791, Val Precision: 0.5385, Val Recall: 0.6002, Val F1: 0.5677
+Epoch [23/200], Train Loss: 0.6575, Train Accuracy: 0.5607, Val Loss: 0.6768, Val Accuracy: 0.5835, Val Precision: 0.5631, Val Recall: 0.4257, Val F1: 0.4848
+Epoch [24/200], Train Loss: 0.6551, Train Accuracy: 0.5610, Val Loss: 0.6783, Val Accuracy: 0.5741, Val Precision: 0.5301, Val Recall: 0.6606, Val F1: 0.5882
+Epoch [25/200], Train Loss: 0.6564, Train Accuracy: 0.5661, Val Loss: 0.6687, Val Accuracy: 0.5895, Val Precision: 0.5765, Val Recall: 0.4090, Val F1: 0.4785
+Early stopping triggered
+Final Validation Results - Loss: 0.6655, Accuracy: 0.5910, Precision: 0.5531, Recall: 0.5815, F1: 0.5669, ROC AUC: 0.6347
