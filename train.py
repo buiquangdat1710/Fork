@@ -8,6 +8,8 @@ from torch.utils.data import DataLoader, Dataset
 from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score
 import matplotlib.pyplot as plt
 from torch.cuda.amp import autocast, GradScaler
+import re
+import numpy as np
 
 print("Training LSTM model...")
 
@@ -23,7 +25,22 @@ tokenizer = AutoTokenizer.from_pretrained(checkpoint, trust_remote_code=True, ad
 model = AutoModel.from_pretrained(checkpoint, trust_remote_code=True).to(device)
 
 # Load and preprocess data
-df = pd.read_csv('data.csv')
+df = pd.read_csv('full_data.csv')
+df  = df[['code', 'label']]
+comment_regex = r'(//[^\n]*|\/\*[\s\S]*?\*\/)'
+newline_regex = '\n{1,}'
+whitespace_regex = '\s{2,}'
+
+def data_cleaning(inp, pat, rep):
+    return re.sub(pat, rep, inp)
+
+df['truncated_code'] = (df ['code'].apply(data_cleaning, args=(comment_regex, ''))
+                                      .apply(data_cleaning, args=(newline_regex, ' '))
+                                      .apply(data_cleaning, args=(whitespace_regex, ' '))
+                         )
+# remove all data points that have more than 15000 characters
+length_check = np.array([len(x) for x in df['truncated_code']]) > 15000
+data = df[~length_check]
 train_data, valid_data, train_labels, valid_labels = train_test_split(df['code'].values, df['label'].values, test_size=TEST_SIZE, random_state=42)
 
 class CodeDataset(Dataset):
@@ -45,8 +62,8 @@ class CodeDataset(Dataset):
 train_dataset = CodeDataset(train_data, train_labels, tokenizer, model)
 valid_dataset = CodeDataset(valid_data, valid_labels, tokenizer, model)
 
-train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True, pin_memory=True)
-valid_loader = DataLoader(valid_dataset, batch_size=8, shuffle=False, pin_memory=True)
+train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True, pin_memory=True)
+valid_loader = DataLoader(valid_dataset, batch_size=16, shuffle=False, pin_memory=True)
 
 class ImprovedLSTMClassifier(nn.Module):
     def __init__(self, embedding_dim, hidden_dim, output_dim, num_layers = 10, dropout=0.5):
@@ -81,7 +98,7 @@ class ImprovedLSTMClassifier(nn.Module):
         return out.squeeze()
 
 embedding_dim = 1024
-hidden_dim = 128
+hidden_dim = 64
 output_dim = 1
 
 model_LSTM = ImprovedLSTMClassifier(embedding_dim, hidden_dim, output_dim, num_layers=10, dropout=0.3).to(device)
@@ -89,7 +106,7 @@ model_LSTM = ImprovedLSTMClassifier(embedding_dim, hidden_dim, output_dim, num_l
 criterion = nn.BCEWithLogitsLoss()
 
 # Add L2 regularization
-optimizer = optim.AdamW(model_LSTM.parameters(), lr=0.001, weight_decay=1e-5)
+optimizer = optim.Adamax(model_LSTM.parameters(), lr=0.001, weight_decay=1e-5)
 scaler = GradScaler()
 
 train_losses = []
@@ -162,17 +179,6 @@ for epoch in range(num_epochs):
 
     torch.cuda.empty_cache()
 
-    # Early stopping
-    if val_loss < best_val_loss:
-        best_val_loss = val_loss
-        patience_counter = 0
-        torch.save(model_LSTM.state_dict(), 'best_model.pth')  # Save the best model
-    else:
-        patience_counter += 1
-
-    if patience_counter >= patience:
-        print("Early stopping triggered")
-        break
 
 # Load the best model
 model_LSTM.load_state_dict(torch.load('best_model.pth'))

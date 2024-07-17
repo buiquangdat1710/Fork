@@ -1,0 +1,156 @@
+2024-07-17 11:51 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:32: SyntaxWarning: invalid escape sequence '\s'
+2024-07-17 11:51 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-17 11:51 +07:00: Traceback (most recent call last):
+2024-07-17 11:51 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 28, in <module>
+2024-07-17 11:51 +07:00:     df = pd.read_csv('full_data.csv')
+2024-07-17 11:51 +07:00:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+2024-07-17 11:51 +07:00:     return _read(filepath_or_buffer, kwds)
+2024-07-17 11:51 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+2024-07-17 11:51 +07:00:     parser = TextFileReader(filepath_or_buffer, **kwds)
+2024-07-17 11:51 +07:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+2024-07-17 11:51 +07:00:     self._engine = self._make_engine(f, self.engine)
+2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+2024-07-17 11:51 +07:00:     self.handles = get_handle(
+2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+2024-07-17 11:51 +07:00:     handle = open(
+2024-07-17 11:51 +07:00:              ^^^^^
+2024-07-17 11:51 +07:00: FileNotFoundError: [Errno 2] No such file or directory: 'full_data.csv'
+2024-07-17 11:51 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:32: SyntaxWarning: invalid escape sequence '\s'
+2024-07-17 11:51 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-17 11:51 +07:00: Traceback (most recent call last):
+2024-07-17 11:51 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 28, in <module>
+2024-07-17 11:51 +07:00:     df = pd.read_csv('full_data.csv')
+2024-07-17 11:51 +07:00:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+2024-07-17 11:51 +07:00:     return _read(filepath_or_buffer, kwds)
+2024-07-17 11:51 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+2024-07-17 11:51 +07:00:     parser = TextFileReader(filepath_or_buffer, **kwds)
+2024-07-17 11:51 +07:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+2024-07-17 11:51 +07:00:     self._engine = self._make_engine(f, self.engine)
+2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+2024-07-17 11:51 +07:00:     self.handles = get_handle(
+2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+2024-07-17 11:51 +07:00:     handle = open(
+2024-07-17 11:51 +07:00:              ^^^^^
+2024-07-17 11:51 +07:00: FileNotFoundError: [Errno 2] No such file or directory: 'full_data.csv'
+2024-07-17 11:51 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:32: SyntaxWarning: invalid escape sequence '\s'
+2024-07-17 11:51 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-17 11:51 +07:00: Traceback (most recent call last):
+2024-07-17 11:51 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 28, in <module>
+2024-07-17 11:51 +07:00:     df = pd.read_csv('full_data.csv')
+2024-07-17 11:51 +07:00:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+2024-07-17 11:51 +07:00:     return _read(filepath_or_buffer, kwds)
+2024-07-17 11:51 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+2024-07-17 11:51 +07:00:     parser = TextFileReader(filepath_or_buffer, **kwds)
+2024-07-17 11:51 +07:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+2024-07-17 11:51 +07:00:     self._engine = self._make_engine(f, self.engine)
+2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+2024-07-17 11:51 +07:00:     self.handles = get_handle(
+2024-07-17 11:51 +07:00:         ^^^^^^^^^^^
+2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+2024-07-17 11:51 +07:00:     handle = open(
+2024-07-17 11:51 +07:00:              ^^^^^
+2024-07-17 11:51 +07:00: FileNotFoundError: [Errno 2] No such file or directory: 'full_data.csv'
+2024-07-17 11:51 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:32: SyntaxWarning: invalid escape sequence '\s'
+2024-07-17 11:51 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-17 12:05 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 12:05 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 12:18 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 12:18 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 12:32 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 12:32 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 12:44 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 12:44 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 12:55 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 12:55 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 13:06 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 13:06 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 13:17 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 13:17 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 13:28 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 13:28 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 13:39 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 13:39 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 13:50 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 13:50 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 14:01 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 14:01 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 14:13 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 14:13 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 14:24 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 14:24 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 14:35 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 14:35 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 14:46 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 14:46 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 14:57 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 14:57 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 15:10 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 15:10 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 15:23 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 15:23 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 15:37 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 15:37 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 15:48 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 15:48 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 15:59 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 15:59 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 16:10 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 16:10 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 16:21 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 16:21 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 16:32 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 16:32 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 16:43 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 16:43 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 16:55 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 16:55 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 17:06 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 17:06 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 17:17 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 17:17 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 17:28 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 17:28 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 17:40 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 17:40 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 17:54 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 17:54 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 18:07 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 18:07 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 18:20 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 18:20 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 18:34 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 18:34 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 18:47 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 18:47 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 19:00 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 19:00 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 19:14 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 19:14 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 19:27 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 19:27 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 19:40 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 19:40 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 19:53 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 19:53 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 20:05 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 20:05 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 20:17 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 20:17 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 20:28 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 20:28 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-17 20:39 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+2024-07-17 20:39 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
