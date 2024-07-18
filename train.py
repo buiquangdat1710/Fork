@@ -1,16 +1,16 @@
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoModel, AutoTokenizer, AutoConfig
 import pandas as pd
 import torch
 from sklearn.model_selection import train_test_split
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, Dataset
-from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score
+from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 from torch.cuda.amp import autocast, GradScaler
-import re
 import numpy as np
-
+import re
+import tensorflow as tf
 print("Training LSTM model...")
 
 TEST_SIZE = 0.2
@@ -22,7 +22,9 @@ print("Using device: ", device)
 
 # Load tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained(checkpoint, trust_remote_code=True, add_eos_token=True)
-model = AutoModel.from_pretrained(checkpoint, trust_remote_code=True).to(device)
+config = AutoConfig.from_pretrained(checkpoint, trust_remote_code=True)
+config.hidden_size = 512  
+model = AutoModel.from_pretrained(checkpoint, config=config, trust_remote_code=True, ignore_mismatched_sizes=True).to(device)
 
 # Load and preprocess data
 df = pd.read_csv('full_data.csv')
@@ -40,7 +42,7 @@ df['truncated_code'] = (df ['code'].apply(data_cleaning, args=(comment_regex, ''
                          )
 # remove all data points that have more than 15000 characters
 length_check = np.array([len(x) for x in df['truncated_code']]) > 15000
-data = df[~length_check]
+df = df[~length_check]
 train_data, valid_data, train_labels, valid_labels = train_test_split(df['code'].values, df['label'].values, test_size=TEST_SIZE, random_state=42)
 
 class CodeDataset(Dataset):
@@ -97,16 +99,21 @@ class ImprovedLSTMClassifier(nn.Module):
         out = self.fc(out)
         return out.squeeze()
 
-embedding_dim = 1024
-hidden_dim = 64
+embedding_dim = 512
+hidden_dim = 128
 output_dim = 1
 
-model_LSTM = ImprovedLSTMClassifier(embedding_dim, hidden_dim, output_dim, num_layers=10, dropout=0.3).to(device)
+model_LSTM = ImprovedLSTMClassifier(embedding_dim, hidden_dim, output_dim, num_layers=10, dropout=0.1).to(device)
 
 criterion = nn.BCEWithLogitsLoss()
 
 # Add L2 regularization
-optimizer = optim.Adamax(model_LSTM.parameters(), lr=0.001, weight_decay=1e-5)
+# initial_learning_rate = 0.01
+# decay_steps = 10
+# decay_rate = 0.9
+
+optimizer = torch.optim.AdamW(model_LSTM.parameters(),lr=0.001, weight_decay=1e-5)
+# scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=decay_rate)
 scaler = GradScaler()
 
 train_losses = []
@@ -133,9 +140,9 @@ def evaluate(model, dataloader, criterion):
 
     avg_loss = total_loss / len(dataloader)
     accuracy = (torch.tensor(all_predictions) == torch.tensor(all_labels)).float().mean().item()
-    precision = precision_score(all_labels, all_predictions)
-    recall = recall_score(all_labels, all_predictions)
-    f1 = f1_score(all_labels, all_predictions)
+    precision = precision_score(all_labels, all_predictions,zero_division=0)
+    recall = recall_score(all_labels, all_predictions,zero_division=0)
+    f1 = f1_score(all_labels, all_predictions,zero_division=0)
 
     return avg_loss, accuracy, precision, recall, f1
 
@@ -178,7 +185,19 @@ for epoch in range(num_epochs):
           f'Val Recall: {val_recall:.4f}, Val F1: {val_f1:.4f}')
 
     torch.cuda.empty_cache()
+    # scheduler.step()
 
+    # Early stopping
+    # if val_loss < best_val_loss:
+    #     best_val_loss = val_loss
+    #     patience_counter = 0
+    #     torch.save(model_LSTM.state_dict(), 'best_model.pth')  # Save the best model
+    # else:
+    #     patience_counter += 1
+
+    # if patience_counter >= patience:
+    #     print("Early stopping triggered")
+    #     break
 
 # Load the best model
 model_LSTM.load_state_dict(torch.load('best_model.pth'))
@@ -214,3 +233,9 @@ roc_auc = roc_auc_score(all_labels, all_predictions)
 
 print(f'Final Validation Results - Loss: {val_loss:.4f}, Accuracy: {val_accuracy:.4f}, '
       f'Precision: {val_precision:.4f}, Recall: {val_recall:.4f}, F1: {val_f1:.4f}, ROC AUC: {roc_auc:.4f}')
+conf_matrix = confusion_matrix(all_labels, (np.array(all_predictions) > 0.5).astype(int))
+disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix)
+disp.plot(cmap=plt.cm.Blues)
+plt.title('Confusion Matrix')
+plt.savefig('confusion_matrix.png')
+plt.show()

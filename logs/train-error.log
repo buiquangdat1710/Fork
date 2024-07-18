@@ -1,156 +1,1195 @@
-2024-07-17 11:51 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:32: SyntaxWarning: invalid escape sequence '\s'
-2024-07-17 11:51 +07:00:   whitespace_regex = '\s{2,}'
-2024-07-17 11:51 +07:00: Traceback (most recent call last):
-2024-07-17 11:51 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 28, in <module>
-2024-07-17 11:51 +07:00:     df = pd.read_csv('full_data.csv')
-2024-07-17 11:51 +07:00:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
-2024-07-17 11:51 +07:00:     return _read(filepath_or_buffer, kwds)
-2024-07-17 11:51 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
-2024-07-17 11:51 +07:00:     parser = TextFileReader(filepath_or_buffer, **kwds)
-2024-07-17 11:51 +07:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
-2024-07-17 11:51 +07:00:     self._engine = self._make_engine(f, self.engine)
-2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
-2024-07-17 11:51 +07:00:     self.handles = get_handle(
-2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
-2024-07-17 11:51 +07:00:     handle = open(
-2024-07-17 11:51 +07:00:              ^^^^^
-2024-07-17 11:51 +07:00: FileNotFoundError: [Errno 2] No such file or directory: 'full_data.csv'
-2024-07-17 11:51 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:32: SyntaxWarning: invalid escape sequence '\s'
-2024-07-17 11:51 +07:00:   whitespace_regex = '\s{2,}'
-2024-07-17 11:51 +07:00: Traceback (most recent call last):
-2024-07-17 11:51 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 28, in <module>
-2024-07-17 11:51 +07:00:     df = pd.read_csv('full_data.csv')
-2024-07-17 11:51 +07:00:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
-2024-07-17 11:51 +07:00:     return _read(filepath_or_buffer, kwds)
-2024-07-17 11:51 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
-2024-07-17 11:51 +07:00:     parser = TextFileReader(filepath_or_buffer, **kwds)
-2024-07-17 11:51 +07:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
-2024-07-17 11:51 +07:00:     self._engine = self._make_engine(f, self.engine)
-2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
-2024-07-17 11:51 +07:00:     self.handles = get_handle(
-2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
-2024-07-17 11:51 +07:00:     handle = open(
-2024-07-17 11:51 +07:00:              ^^^^^
-2024-07-17 11:51 +07:00: FileNotFoundError: [Errno 2] No such file or directory: 'full_data.csv'
-2024-07-17 11:51 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:32: SyntaxWarning: invalid escape sequence '\s'
-2024-07-17 11:51 +07:00:   whitespace_regex = '\s{2,}'
-2024-07-17 11:51 +07:00: Traceback (most recent call last):
-2024-07-17 11:51 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 28, in <module>
-2024-07-17 11:51 +07:00:     df = pd.read_csv('full_data.csv')
-2024-07-17 11:51 +07:00:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
-2024-07-17 11:51 +07:00:     return _read(filepath_or_buffer, kwds)
-2024-07-17 11:51 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
-2024-07-17 11:51 +07:00:     parser = TextFileReader(filepath_or_buffer, **kwds)
-2024-07-17 11:51 +07:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
-2024-07-17 11:51 +07:00:     self._engine = self._make_engine(f, self.engine)
-2024-07-17 11:51 +07:00:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
-2024-07-17 11:51 +07:00:     self.handles = get_handle(
-2024-07-17 11:51 +07:00:         ^^^^^^^^^^^
-2024-07-17 11:51 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
-2024-07-17 11:51 +07:00:     handle = open(
-2024-07-17 11:51 +07:00:              ^^^^^
-2024-07-17 11:51 +07:00: FileNotFoundError: [Errno 2] No such file or directory: 'full_data.csv'
-2024-07-17 11:51 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:32: SyntaxWarning: invalid escape sequence '\s'
-2024-07-17 11:51 +07:00:   whitespace_regex = '\s{2,}'
-2024-07-17 12:05 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 12:05 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 12:18 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 12:18 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 12:32 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 12:32 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 12:44 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 12:44 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 12:55 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 12:55 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 13:06 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 13:06 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 13:17 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 13:17 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 13:28 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 13:28 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 13:39 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 13:39 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 13:50 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 13:50 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 14:01 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 14:01 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 14:13 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 14:13 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 14:24 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 14:24 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 14:35 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 14:35 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 14:46 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 14:46 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 14:57 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 14:57 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 15:10 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 15:10 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 15:23 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 15:23 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 15:37 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 15:37 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 15:48 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 15:48 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 15:59 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 15:59 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 16:10 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 16:10 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 16:21 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 16:21 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 16:32 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 16:32 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 16:43 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 16:43 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 16:55 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 16:55 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 17:06 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 17:06 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 17:17 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 17:17 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 17:28 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 17:28 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 17:40 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 17:40 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 17:54 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 17:54 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 18:07 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 18:07 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 18:20 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 18:20 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 18:34 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 18:34 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 18:47 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 18:47 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 19:00 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 19:00 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 19:14 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 19:14 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 19:27 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 19:27 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 19:40 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 19:40 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 19:53 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 19:53 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 20:05 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 20:05 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 20:17 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 20:17 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 20:28 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 20:28 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
-2024-07-17 20:39 +07:00: /home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
-2024-07-17 20:39 +07:00:   _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+2024-07-18 07:29 +07:00: Traceback (most recent call last):
+2024-07-18 07:29 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 153, in <module>
+2024-07-18 07:29 +07:00:     
+2024-07-18 07:29 +07:00:     
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+2024-07-18 07:29 +07:00:     data = self._next_data()
+2024-07-18 07:29 +07:00:            ^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+2024-07-18 07:29 +07:00:     data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+2024-07-18 07:29 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+2024-07-18 07:29 +07:00:     data = [self.dataset[idx] for idx in possibly_batched_index]
+2024-07-18 07:29 +07:00:             ~~~~~~~~~~~~^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 59, in __getitem__
+2024-07-18 07:29 +07:00:     inputs = self.tokenizer(self.data[idx], return_tensors="pt", truncation=True, max_length=1024)
+2024-07-18 07:29 +07:00:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+2024-07-18 07:29 +07:00:     return self._call_impl(*args, **kwargs)
+2024-07-18 07:29 +07:00: ^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+2024-07-18 07:29 +07:00:     return forward_call(*args, **kwargs)
+2024-07-18 07:29 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/.cache/huggingface/modules/transformers_modules/codesage/codesage-base/0d4b5090a3cd0e0262bcdc0a07fc24f37d1a2e00/modeling_codesage.py", line 250, in forward
+2024-07-18 07:29 +07:00:     outputs = block(
+2024-07-18 07:29 +07:00:               ^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+2024-07-18 07:29 +07:00:     return self._call_impl(*args, **kwargs)
+2024-07-18 07:29 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+2024-07-18 07:29 +07:00:     return forward_call(*args, **kwargs)
+2024-07-18 07:29 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/.cache/huggingface/modules/transformers_modules/codesage/codesage-base/0d4b5090a3cd0e0262bcdc0a07fc24f37d1a2e00/modeling_codesage.py", line 137, in forward
+2024-07-18 07:29 +07:00:     attn_outputs = self.attn(
+2024-07-18 07:29 +07:00:                    ^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+2024-07-18 07:29 +07:00:     return self._call_impl(*args, **kwargs)
+2024-07-18 07:29 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+2024-07-18 07:29 +07:00:     return forward_call(*args, **kwargs)
+2024-07-18 07:29 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/.cache/huggingface/modules/transformers_modules/codesage/codesage-base/0d4b5090a3cd0e0262bcdc0a07fc24f37d1a2e00/modeling_codesage.py", line 91, in forward
+2024-07-18 07:29 +07:00:     attn_output, attn_weights = self.attn(query, key, value, attention_mask, head_mask)
+2024-07-18 07:29 +07:00:                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/.cache/huggingface/modules/transformers_modules/codesage/codesage-base/0d4b5090a3cd0e0262bcdc0a07fc24f37d1a2e00/modeling_codesage.py", line 55, in attn
+2024-07-18 07:29 +07:00:     attn_weights = nn.Softmax(dim=-1)(attn_weights)
+2024-07-18 07:29 +07:00:                    ^^^^^^^^^^^^^^^^^^
+2024-07-18 07:29 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 1535, in __init__
+2024-07-18 07:29 +07:00:     def __init__(self, dim: Optional[int] = None) -> None:
+2024-07-18 07:29 +07:00: 
+2024-07-18 07:29 +07:00: KeyboardInterrupt
+2024-07-18 07:29 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:29 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:29 +07:00: Traceback (most recent call last):
+2024-07-18 07:29 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:29 +07:00:     import tensorflow as tf
+2024-07-18 07:29 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:29 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:29 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:29 +07:00: Traceback (most recent call last):
+2024-07-18 07:29 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:29 +07:00:     import tensorflow as tf
+2024-07-18 07:29 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:29 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:29 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:29 +07:00: Traceback (most recent call last):
+2024-07-18 07:29 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:29 +07:00:     import tensorflow as tf
+2024-07-18 07:29 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:29 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:29 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:29 +07:00: Traceback (most recent call last):
+2024-07-18 07:29 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:29 +07:00:     import tensorflow as tf
+2024-07-18 07:29 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:29 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:29 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:29 +07:00: Traceback (most recent call last):
+2024-07-18 07:29 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:29 +07:00:     import tensorflow as tf
+2024-07-18 07:29 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:29 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:29 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:30 +07:00: Traceback (most recent call last):
+2024-07-18 07:30 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:30 +07:00:     import tensorflow as tf
+2024-07-18 07:30 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:30 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:30 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Traceback (most recent call last):
+2024-07-18 07:31 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 13, in <module>
+2024-07-18 07:31 +07:00:     import tensorflow as tf
+2024-07-18 07:31 +07:00: ModuleNotFoundError: No module named 'tensorflow'
+2024-07-18 07:31 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:31 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:31 +07:00: Some weights of CodeSageModel were not initialized from the model checkpoint at codesage/codesage-base and are newly initialized because the shapes did not match:
+2024-07-18 07:31 +07:00: - transformer.wte.weight: found shape torch.Size([49154, 1024]) in the checkpoint and torch.Size([49154, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.wpe.weight: found shape torch.Size([2048, 1024]) in the checkpoint and torch.Size([2048, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.0.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.1.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.2.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.3.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.4.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.5.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.6.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.7.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.8.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.9.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.10.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.11.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.12.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.13.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.14.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.15.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.16.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.17.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.18.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.19.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.20.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.21.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.22.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.h.23.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.ln_f.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: - transformer.ln_f.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:31 +07:00: You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2024-07-18 07:32 +07:00: Traceback (most recent call last):
+2024-07-18 07:32 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 160, in <module>
+2024-07-18 07:32 +07:00:     for inputs, labels in train_loader:
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+2024-07-18 07:32 +07:00:     data = self._next_data()
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+2024-07-18 07:32 +07:00:     data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+2024-07-18 07:32 +07:00:     data = [self.dataset[idx] for idx in possibly_batched_index]
+2024-07-18 07:32 +07:00:             ~~~~~~~~~~~~^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 61, in __getitem__
+2024-07-18 07:32 +07:00:     embedding = self.base_model(**inputs.to(device)).last_hidden_state[:, 0, :].cpu()
+2024-07-18 07:32 +07:00:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+2024-07-18 07:32 +07:00:     return self._call_impl(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+2024-07-18 07:32 +07:00:     return forward_call(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/.cache/huggingface/modules/transformers_modules/codesage/codesage-base/0d4b5090a3cd0e0262bcdc0a07fc24f37d1a2e00/modeling_codesage.py", line 261, in forward
+2024-07-18 07:32 +07:00:     hidden_states = self.ln_f(hidden_states)
+2024-07-18 07:32 +07:00:                     ^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+2024-07-18 07:32 +07:00:     return self._call_impl(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+2024-07-18 07:32 +07:00:     return forward_call(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/normalization.py", line 201, in forward
+2024-07-18 07:32 +07:00:     return F.layer_norm(
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/functional.py", line 2573, in layer_norm
+2024-07-18 07:32 +07:00:     return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00: KeyboardInterrupt
+2024-07-18 07:32 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:32 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:36.858452: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:36.878273: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:36.884465: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:36.899092: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-07-18 07:32 +07:00: To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:37.939163: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-07-18 07:32 +07:00: Some weights of CodeSageModel were not initialized from the model checkpoint at codesage/codesage-base and are newly initialized because the shapes did not match:
+2024-07-18 07:32 +07:00: - transformer.wte.weight: found shape torch.Size([49154, 1024]) in the checkpoint and torch.Size([49154, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.wpe.weight: found shape torch.Size([2048, 1024]) in the checkpoint and torch.Size([2048, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.0.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.1.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.2.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.3.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.4.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.5.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.6.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.7.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.8.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.9.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.10.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.11.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.12.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.13.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.14.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.15.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.16.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.17.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.18.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.19.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.20.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.21.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.22.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.h.23.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.ln_f.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: - transformer.ln_f.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:32 +07:00: You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2024-07-18 07:32 +07:00: Traceback (most recent call last):
+2024-07-18 07:32 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 160, in <module>
+2024-07-18 07:32 +07:00:     for inputs, labels in train_loader:
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+2024-07-18 07:32 +07:00:     data = self._next_data()
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+2024-07-18 07:32 +07:00:     data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+2024-07-18 07:32 +07:00:     data = [self.dataset[idx] for idx in possibly_batched_index]
+2024-07-18 07:32 +07:00:             ~~~~~~~~~~~~^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/Individual/Extened/CodeSage/train.py", line 61, in __getitem__
+2024-07-18 07:32 +07:00:     embedding = self.base_model(**inputs.to(device)).last_hidden_state[:, 0, :].cpu()
+2024-07-18 07:32 +07:00:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+2024-07-18 07:32 +07:00:     return self._call_impl(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+2024-07-18 07:32 +07:00:     return forward_call(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/.cache/huggingface/modules/transformers_modules/codesage/codesage-base/0d4b5090a3cd0e0262bcdc0a07fc24f37d1a2e00/modeling_codesage.py", line 250, in forward
+2024-07-18 07:32 +07:00:     outputs = block(
+2024-07-18 07:32 +07:00:               ^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+2024-07-18 07:32 +07:00:     return self._call_impl(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+2024-07-18 07:32 +07:00:     return forward_call(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/.cache/huggingface/modules/transformers_modules/codesage/codesage-base/0d4b5090a3cd0e0262bcdc0a07fc24f37d1a2e00/modeling_codesage.py", line 136, in forward
+2024-07-18 07:32 +07:00:     hidden_states = self.ln_1(hidden_states)
+2024-07-18 07:32 +07:00:                     ^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+2024-07-18 07:32 +07:00:     return self._call_impl(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+2024-07-18 07:32 +07:00:     return forward_call(*args, **kwargs)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/modules/normalization.py", line 201, in forward
+2024-07-18 07:32 +07:00:     return F.layer_norm(
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00:   File "/home/naver/anaconda3/envs/agent/lib/python3.12/site-packages/torch/nn/functional.py", line 2573, in layer_norm
+2024-07-18 07:32 +07:00:     return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+2024-07-18 07:32 +07:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-07-18 07:32 +07:00: KeyboardInterrupt
+2024-07-18 07:32 +07:00: /home/naver/Individual/Extened/CodeSage/train.py:34: SyntaxWarning: invalid escape sequence '\s'
+2024-07-18 07:32 +07:00:   whitespace_regex = '\s{2,}'
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:55.030228: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:55.049443: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:55.055440: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:55.069555: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-07-18 07:32 +07:00: To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-18 07:32 +07:00: 2024-07-18 07:32:56.169902: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-07-18 07:33 +07:00: Some weights of CodeSageModel were not initialized from the model checkpoint at codesage/codesage-base and are newly initialized because the shapes did not match:
+2024-07-18 07:33 +07:00: - transformer.wte.weight: found shape torch.Size([49154, 1024]) in the checkpoint and torch.Size([49154, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.wpe.weight: found shape torch.Size([2048, 1024]) in the checkpoint and torch.Size([2048, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.0.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.1.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.2.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.3.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.4.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.5.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.6.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.7.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.8.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.9.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.10.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.11.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.12.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.13.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.14.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.15.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.16.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.17.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.18.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.19.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.20.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.21.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.22.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.ln_1.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.ln_1.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.attn.c_attn.weight: found shape torch.Size([1024, 3072]) in the checkpoint and torch.Size([512, 1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.attn.c_attn.bias: found shape torch.Size([3072]) in the checkpoint and torch.Size([1536]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.attn.c_proj.weight: found shape torch.Size([1024, 1024]) in the checkpoint and torch.Size([512, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.attn.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.ln_2.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.ln_2.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.mlp.c_fc.weight: found shape torch.Size([1024, 4096]) in the checkpoint and torch.Size([512, 4096]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.mlp.c_proj.weight: found shape torch.Size([4096, 1024]) in the checkpoint and torch.Size([4096, 512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.h.23.mlp.c_proj.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.ln_f.weight: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: - transformer.ln_f.bias: found shape torch.Size([1024]) in the checkpoint and torch.Size([512]) in the model instantiated
+2024-07-18 07:33 +07:00: You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
