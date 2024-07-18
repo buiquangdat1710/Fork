@@ -64,8 +64,8 @@ class CodeDataset(Dataset):
 train_dataset = CodeDataset(train_data, train_labels, tokenizer, model)
 valid_dataset = CodeDataset(valid_data, valid_labels, tokenizer, model)
 
-train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True, pin_memory=True)
-valid_loader = DataLoader(valid_dataset, batch_size=16, shuffle=False, pin_memory=True)
+train_loader = DataLoader(train_dataset, batch_size=128, shuffle=True, pin_memory=True)
+valid_loader = DataLoader(valid_dataset, batch_size=128, shuffle=False, pin_memory=True)
 
 class ImprovedLSTMClassifier(nn.Module):
     def __init__(self, embedding_dim, hidden_dim, output_dim, num_layers = 10, dropout=0.5):
