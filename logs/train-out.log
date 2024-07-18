@@ -7,3 +7,12 @@
 2024-07-18 07:32 +07:00: Training LSTM model...
 2024-07-18 07:32 +07:00: Using device:  cuda
 2024-07-18 07:33 +07:00: Training LSTM model...
+2024-07-18 07:46 +07:00: Epoch [1/200], Train Loss: 0.6894, Train Accuracy: 0.5462, Val Loss: 0.6807, Val Accuracy: 0.5697, Val Precision: 0.6087, Val Recall: 0.1580, Val F1: 0.2509
+2024-07-18 07:59 +07:00: Epoch [2/200], Train Loss: 0.6788, Train Accuracy: 0.5619, Val Loss: 0.6790, Val Accuracy: 0.5645, Val Precision: 0.7500, Val Recall: 0.0677, Val F1: 0.1242
+2024-07-18 08:12 +07:00: Epoch [3/200], Train Loss: 0.6727, Train Accuracy: 0.5731, Val Loss: 0.6717, Val Accuracy: 0.5868, Val Precision: 0.5937, Val Recall: 0.2975, Val F1: 0.3963
+2024-07-18 08:26 +07:00: Epoch [4/200], Train Loss: 0.6675, Train Accuracy: 0.5763, Val Loss: 0.6664, Val Accuracy: 0.5765, Val Precision: 0.7323, Val Recall: 0.1125, Val F1: 0.1950
+2024-07-18 08:37 +07:00: Epoch [5/200], Train Loss: 0.6674, Train Accuracy: 0.5767, Val Loss: 0.6620, Val Accuracy: 0.5866, Val Precision: 0.5638, Val Recall: 0.4131, Val F1: 0.4769
+2024-07-18 08:48 +07:00: Epoch [6/200], Train Loss: 0.6622, Train Accuracy: 0.5791, Val Loss: 0.6630, Val Accuracy: 0.5831, Val Precision: 0.7271, Val Recall: 0.1374, Val F1: 0.2312
+2024-07-18 08:58 +07:00: Epoch [7/200], Train Loss: 0.6570, Train Accuracy: 0.5835, Val Loss: 0.6572, Val Accuracy: 0.5908, Val Precision: 0.7297, Val Recall: 0.1632, Val F1: 0.2668
+2024-07-18 09:09 +07:00: Epoch [8/200], Train Loss: 0.6553, Train Accuracy: 0.5828, Val Loss: 0.6557, Val Accuracy: 0.5862, Val Precision: 0.5607, Val Recall: 0.4281, Val F1: 0.4855
+2024-07-18 09:20 +07:00: Epoch [9/200], Train Loss: 0.6517, Train Accuracy: 0.5841, Val Loss: 0.6587, Val Accuracy: 0.5971, Val Precision: 0.5989, Val Recall: 0.3527, Val F1: 0.4439
