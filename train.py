@@ -1,241 +1,297 @@
-from transformers import AutoModel, AutoTokenizer, AutoConfig
-import pandas as pd
-import torch
-from sklearn.model_selection import train_test_split
-import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import DataLoader, Dataset
-from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix, ConfusionMatrixDisplay
-import matplotlib.pyplot as plt
-from torch.cuda.amp import autocast, GradScaler
-import numpy as np
 import re
-import tensorflow as tf
-print("Training LSTM model...")
+import os
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments, AutoModel
+from datasets import Dataset, load_dataset
+import pandas as pd
+import numpy as np
+import random
+from sklearn.model_selection import train_test_split
+import pandas as pd
+from datasets import Dataset, DatasetDict
+import torch.nn as nn
+import torch
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
 
-TEST_SIZE = 0.2
-DROP_OUT_P = 0.1
-num_epochs = 200
-checkpoint = "codesage/codesage-base"
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
+seed = 42
+random.seed(seed)
+torch.manual_seed(seed)
+torch.cuda.manual_seed(seed)
+np.random.seed(seed)
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
+
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print("Using device: ", device)
+model_ckpt_c = 'neulab/codebert-c'
+model_ckpt_cpp = 'neulab/codebert-cpp'
+model_ckpt_t5 = 'Salesforce/codet5p-110m-embedding'
+model_ckpt_unixcoder = 'microsoft/unixcoder-base'
+model_codesage_small = 'codesage/codesage-small'
+model_roberta = 'FacebookAI/roberta-base'
+model_name = model_ckpt_cpp
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-# Load tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained(checkpoint, trust_remote_code=True, add_eos_token=True)
-config = AutoConfig.from_pretrained(checkpoint, trust_remote_code=True)
-config.hidden_size = 512  
-model = AutoModel.from_pretrained(checkpoint, config=config, trust_remote_code=True, ignore_mismatched_sizes=True).to(device)
+model = AutoModel.from_pretrained(model_name, trust_remote_code=True).to(device)
+file_path = 'full_data.csv'
+data = pd.read_csv(file_path)
+print(len(data))
+data = data[['code', 'label']]
+data['label'].value_counts()
+print(data['label'].value_counts())
 
-# Load and preprocess data
-df = pd.read_csv('full_data.csv')
-df  = df[['code', 'label']]
 comment_regex = r'(//[^\n]*|\/\*[\s\S]*?\*\/)'
 newline_regex = '\n{1,}'
-whitespace_regex = '\s{2,}'
+whitespace_regex = r"\s{2,}"
 
 def data_cleaning(inp, pat, rep):
     return re.sub(pat, rep, inp)
 
-df['truncated_code'] = (df ['code'].apply(data_cleaning, args=(comment_regex, ''))
+data['truncated_code'] = (data['code'].apply(data_cleaning, args=(comment_regex, ''))
                                       .apply(data_cleaning, args=(newline_regex, ' '))
                                       .apply(data_cleaning, args=(whitespace_regex, ' '))
                          )
 # remove all data points that have more than 15000 characters
-length_check = np.array([len(x) for x in df['truncated_code']]) > 15000
-df = df[~length_check]
-train_data, valid_data, train_labels, valid_labels = train_test_split(df['code'].values, df['label'].values, test_size=TEST_SIZE, random_state=42)
+length_check = np.array([len(x) for x in data['truncated_code']]) > 15000
+data = data[~length_check]
+X_train, X_test_valid, y_train, y_test_valid = train_test_split(data.loc[:, data.columns != 'label'],
+                                                                data['label'],
+                                                                train_size=0.8,
+                                                                stratify=data['label']
+                                                               )
+X_test, X_valid, y_test, y_valid = train_test_split(X_test_valid.loc[:, X_test_valid.columns != 'label'],
+                                                    y_test_valid,
+                                                    test_size=0.5,
+                                                    stratify=y_test_valid)
+data_train = X_train
+data_train['label'] = y_train
+data_test = X_test
+data_test['label'] = y_test
+data_valid = X_valid
+data_valid['label'] = y_valid
 
-class CodeDataset(Dataset):
-    def __init__(self, data, labels, tokenizer, base_model):
-        self.data = data
-        self.labels = labels
-        self.tokenizer = tokenizer
-        self.base_model = base_model
+dts = DatasetDict()
+dts['train'] = Dataset.from_pandas(data_train)
+dts['test'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
+dts['valid'] = Dataset.from_pandas(data_test[:256])
 
-    def __len__(self):
-        return len(self.data)
+def tokenizer_func(examples):
+    result = tokenizer(examples['truncated_code'])
+    return result
 
-    def __getitem__(self, idx):
-        inputs = self.tokenizer(self.data[idx], return_tensors="pt", truncation=True, max_length=1024)
-        with torch.no_grad():
-            embedding = self.base_model(**inputs.to(device)).last_hidden_state[:, 0, :].cpu()
-        return embedding.squeeze(0), self.labels[idx]
+dts = dts.map(tokenizer_func,
+             batched=True,
+             batch_size=128
+             )
 
-train_dataset = CodeDataset(train_data, train_labels, tokenizer, model)
-valid_dataset = CodeDataset(valid_data, valid_labels, tokenizer, model)
+dts.set_format('torch')
+dts.rename_column('label', 'labels')
+dts = dts.remove_columns(['code', 'truncated_code', '__index_level_0__'])    
 
-train_loader = DataLoader(train_dataset, batch_size=128, shuffle=True, pin_memory=True)
-valid_loader = DataLoader(valid_dataset, batch_size=128, shuffle=False, pin_memory=True)
+import torch.nn as nn
+import torch
+from transformers import AutoModel
+class PositionalEncoding(nn.Module):
+    def __init__(self, d_model, max_len, dropout=0.1, padding_idx=0):
+        super().__init__()
+        self.dropout = nn.Dropout(p=dropout)
 
-class ImprovedLSTMClassifier(nn.Module):
-    def __init__(self, embedding_dim, hidden_dim, output_dim, num_layers = 10, dropout=0.5):
-        super(ImprovedLSTMClassifier, self).__init__()
-        self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers, batch_first=True, dropout=dropout)
-        self.batch_norm = nn.BatchNorm1d(hidden_dim)
-        self.fc = nn.Linear(hidden_dim, output_dim)
-        self.dropout = nn.Dropout(dropout)
-        self.hidden_dim = hidden_dim
-
-    def attention_net(self, lstm_output, final_state):
-        hidden = final_state.view(-1, self.hidden_dim, 1)
-        attn_weights = torch.bmm(lstm_output, hidden).squeeze(2)
-        soft_attn_weights = nn.functional.softmax(attn_weights, 1)
-        context = torch.bmm(lstm_output.transpose(1, 2), soft_attn_weights.unsqueeze(2)).squeeze(2)
-        return context
+        # define embedding layers for encoding positions
+        self.pos_encoding = nn.Embedding(max_len, d_model, padding_idx=padding_idx)
 
     def forward(self, x):
-        if x.dim() == 2:
-            x = x.unsqueeze(1)
+        device = x.device
+        chunk_size, B, d_model = x.shape
+        position_ids = torch.arange(0, chunk_size, dtype=torch.int).unsqueeze(1).to(device)
+        position_enc = self.pos_encoding(position_ids) # (chunk_size, 1, d_model)
+    
+        position_enc = position_enc.expand(chunk_size, B, d_model)
+
+        # Add positional encoding to the input token embeddings
+        x = x + position_enc
+        x = self.dropout(x)
+
+        return x
+class CodeBertModel(nn.Module):
+    def __init__(self,
+                 max_seq_length: int = 512,
+                 chunk_size: int = 512,
+                 padding_idx: int = 0,
+                 model_ckpt: str = '',
+                 num_heads: int = 8,
+                 **from_pretrained_kwargs):
+        super().__init__()
+        self.embedding_model = AutoModel.from_pretrained(model_ckpt, trust_remote_code=True)
+
+        dict_config = self.embedding_model.config.to_dict()
+        for sym in ['hidden_dim', 'embed_dim', 'hidden_size']:
+            if sym in dict_config.keys():
+                embed_dim = dict_config[sym]
+
+        encoder_layer = nn.TransformerEncoderLayer(d_model=embed_dim,
+                                                   nhead=num_heads,
+                                                   dim_feedforward=768,
+                                                   batch_first=False)
+
+        self.transformer_encoder = nn.TransformerEncoder(encoder_layer=encoder_layer,
+                                                         num_layers=2,
+                                                         )
+
+        self.positional_encoding = PositionalEncoding(max_len=max_seq_length,
+                                                      d_model=embed_dim,
+                                                      padding_idx=padding_idx)
+
+        self.loss_func = nn.CrossEntropyLoss(weight=torch.Tensor([1.0, 6.0]),
+                                             label_smoothing=0.2)
+
+        self.ffn = nn.Sequential(nn.Dropout(p=0.1),
+                                 nn.Linear(embed_dim, 2)
+                                 )
+        self.chunk_size = chunk_size
+
+    def prepare_chunk(self, input_ids: torch.Tensor,
+                            attention_mask: torch.Tensor,
+                            labels=None):
+        """
+        Prepare inputs into chunks that self.embedding_model can process (length < context_length)
+        Shape info:
+        - input_ids: (B, L)
+        - attention_mask: (B, L)
+        """
+
+        # calculate number of chunks
+        num_chunk = input_ids.shape[-1] // self.chunk_size
+        if input_ids.shape[-1] % self.chunk_size != 0:
+            num_chunk += 1
+            pad_len = self.chunk_size - (input_ids.shape[-1] % self.chunk_size)
+        else:
+            pad_len = 0
+
+        B = input_ids.shape[0]
+        # get the model's pad_token_id
+        pad_token_id = self.embedding_model.config.pad_token_id
+
+        # create a pad & zero tensor, then append it to the input_ids & attention_mask tensor respectively
+        pad_tensor = torch.Tensor([pad_token_id]).expand(input_ids.shape[0], pad_len).int().to(device)
+        zero_tensor = torch.zeros(input_ids.shape[0], pad_len).int().to(device)
+        padded_input_ids = torch.cat([input_ids, pad_tensor], dim = -1).T # (chunk_size * num_chunk, B)
+        padded_attention_mask = torch.cat([attention_mask, zero_tensor], dim = -1).T # (chunk_size * num_chunk, B)
+
+        chunked_input_ids = padded_input_ids.reshape(num_chunk, self.chunk_size, B).permute(0, 2, 1) # (num_chunk, B, chunk_size)
+        chunked_attention_mask = padded_attention_mask.reshape(num_chunk, self.chunk_size, B).permute(0, 2, 1) # (num_chunk, B, chunk_size)
+
+        pad_chunk_mask = self.create_chunk_key_padding_mask(chunked_input_ids)
+
+        return chunked_input_ids, chunked_attention_mask, pad_chunk_mask
+
+    def create_chunk_key_padding_mask(self, chunks):
+        """
+        If a chunk contains only pad tokens, ignore that chunk
+        chunks: B, num_chunk, chunk_size
+        """
+        pad_token_id = self.embedding_model.config.pad_token_id
+        pad_mask = (chunks == pad_token_id)
+
+        num_pad = (torch.sum(pad_mask, -1) == self.chunk_size).permute(1, 0) # (num_chunk, B)
+
+        return num_pad
+
+    def forward(self, input_ids, attention_mask, labels=None):
+
+        # calculate numbers of chunk
+        chunked_input_ids, chunked_attention_mask, pad_chunk_mask = self.prepare_chunk(input_ids, attention_mask) # (num_chunk, B, chunk_size), (num_chunk, B, chunk_size), (num_chunk, B)
+
+        # reshape input_ids & attention_mask tensors to fit into embedding model
+        num_chunk, B, chunk_size = chunked_input_ids.shape
+        chunked_input_ids, chunked_attention_mask = chunked_input_ids.contiguous().view(-1, chunk_size), chunked_attention_mask.contiguous().view(-1, self.chunk_size) # (B * num_chunk, chunk_size), (B * num_chunk, chunk_size)
+
+        embedded_chunks = (self.embedding_model(input_ids = chunked_input_ids,
+                                                attention_mask = chunked_attention_mask)['pooler_output'] # (B * num_chunk, self.embedding_model.config.hidden_dim)
+                               .view(num_chunk, B, -1) # (num_chunk, B, self.embedding_model.config.hidden_dim)
+                          )
         
-        batch_size, seq_len, _ = x.size()
-        
-        lstm_out, (hn, cn) = self.lstm(x)
-        
-        attn_out = self.attention_net(lstm_out, hn[-1])
-        
-        attn_out = self.batch_norm(attn_out)
-        
-        out = self.dropout(attn_out)
-        out = self.fc(out)
-        return out.squeeze()
+#         embedded_chunks = (self.embedding_model(input_ids = chunked_input_ids,
+#                                                 attention_mask = chunked_attention_mask) # (B * num_chunk, self.embedding_model.config.hidden_dim)
+#                                .view(num_chunk, B, -1) # (num_chunk, B, self.embedding_model.config.hidden_dim)
+#                           )
 
-embedding_dim = 512
-hidden_dim = 128
-output_dim = 1
+        embedded_chunks = self.positional_encoding(embedded_chunks)
 
-model_LSTM = ImprovedLSTMClassifier(embedding_dim, hidden_dim, output_dim, num_layers=10, dropout=0.1).to(device)
+        output = self.transformer_encoder(embedded_chunks,
+                                          src_key_padding_mask = pad_chunk_mask) # (num_chunk, B, self.embedding_model.config.hidden_dim)
 
-criterion = nn.BCEWithLogitsLoss()
+        logits = self.ffn(output[0])
 
-# Add L2 regularization
-# initial_learning_rate = 0.01
-# decay_steps = 10
-# decay_rate = 0.9
+        if labels is not None:
+            loss = self.loss_func(logits, labels)
+            return {"loss": loss, "logits": logits}
 
-optimizer = torch.optim.AdamW(model_LSTM.parameters(),lr=0.001, weight_decay=1e-5)
-# scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=decay_rate)
-scaler = GradScaler()
+        return {"logits": logits}
 
-train_losses = []
-val_losses = []
 
-print("Training LSTM model...")
+from sklearn.metrics import precision_score, accuracy_score, recall_score, f1_score
+def compute_metrics(eval_pred):
+    y_pred, y_true = np.argmax(eval_pred.predictions, -1), eval_pred.label_ids
+    return {'accuracy': accuracy_score(y_true, y_pred),
+            'precision': precision_score(y_true, y_pred),
+            'recall': recall_score(y_true, y_pred),
+            'f1': f1_score(y_true, y_pred)}
 
-def evaluate(model, dataloader, criterion):
-    model.eval()
-    total_loss = 0.0
-    all_predictions = []
-    all_labels = []
+model = CodeBertModel(model_ckpt = model_codesage_small, max_seq_length=512, chunk_size = 512, num_heads=8)
 
-    with torch.no_grad():
-        for inputs, labels in dataloader:
-            inputs, labels = inputs.to(device), labels.to(device)
-            outputs = model(inputs)
-            loss = criterion(outputs, labels.float())
-            total_loss += loss.item()
+from transformers import Trainer, TrainingArguments, DataCollatorWithPadding
+data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
-            predictions = (torch.sigmoid(outputs) > 0.5).float()
-            all_predictions.extend(predictions.cpu().numpy())
-            all_labels.extend(labels.cpu().numpy())
+training_arguments = TrainingArguments(
+    output_dir = './outputs/',
+    eval_strategy = 'epoch',
+    per_device_train_batch_size = 64,  # Reduced batch size
+    per_device_eval_batch_size = 64,   # Reduced batch size
+    gradient_accumulation_steps = 1,   # Reduced from 12
+    learning_rate = 3e-5,
+    num_train_epochs = 200,
+    warmup_ratio = 0.1,
+    lr_scheduler_type = 'cosine',
+    logging_strategy = 'steps',
+    logging_steps = 10,
+    save_strategy = 'no',
+    fp16 = False,  # Disabled mixed precision
+    metric_for_best_model = 'recall',
+    optim = 'adamw_torch',
+    report_to = 'none'
+)
+trainer = Trainer(model=model,
+                  data_collator=data_collator,
+                  args=training_arguments,
+                  train_dataset=dts['train'],
+                  eval_dataset=dts['valid'],
+                  compute_metrics=compute_metrics,
+                 )
 
-    avg_loss = total_loss / len(dataloader)
-    accuracy = (torch.tensor(all_predictions) == torch.tensor(all_labels)).float().mean().item()
-    precision = precision_score(all_labels, all_predictions,zero_division=0)
-    recall = recall_score(all_labels, all_predictions,zero_division=0)
-    f1 = f1_score(all_labels, all_predictions,zero_division=0)
+trainer.train()
 
-    return avg_loss, accuracy, precision, recall, f1
+torch.save(torch.save(model.state_dict(), 'best_model.pth'))
 
-# Early stopping criteria
-patience = 15
-best_val_loss = float('inf')
-patience_counter = 0
+check = trainer.predict(dts['test'])
 
-for epoch in range(num_epochs):
-    model_LSTM.train()
-    epoch_loss = 0.0
-    correct_predictions = 0
-    total_predictions = 0
+compute_metrics(check)
 
-    for inputs, labels in train_loader:
-        inputs, labels = inputs.to(device), labels.to(device)
-        optimizer.zero_grad()
-        
-        with autocast():
-            outputs = model_LSTM(inputs)
-            loss = criterion(outputs, labels.float())
-        predictions = (outputs.squeeze() > 0.5).float()
-        correct_predictions += (predictions == labels).sum().item()
-        total_predictions += labels.size(0)
-        
-        scaler.scale(loss).backward()
-        scaler.step(optimizer)
-        scaler.update()
+def plot_confusion(eval_pred):
+    y_pred, y_true = np.argmax(eval_pred.predictions, -1), eval_pred.label_ids
+    cm = confusion_matrix(y_true, y_pred)
 
-        epoch_loss += loss.item()
-    train_loss = epoch_loss / len(train_loader)
-    train_losses.append(train_loss)
-    accuracy = correct_predictions / total_predictions
+# Plot confusion matrix
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Negative', 'Positive'], yticklabels=['Negative', 'Positive'])
+    plt.xlabel('Predicted Labels')
+    plt.ylabel('Actual Labels')
+    plt.title('Confusion Matrix')
+    plt.show()
+    
 
-    val_loss, val_accuracy, val_precision, val_recall, val_f1 = evaluate(model_LSTM, valid_loader, criterion)
-    val_losses.append(val_loss)
 
-    print(f'Epoch [{epoch+1}/{num_epochs}], Train Loss: {train_loss:.4f}, Train Accuracy: {accuracy:.4f}, Val Loss: {val_loss:.4f}, '
-          f'Val Accuracy: {val_accuracy:.4f}, Val Precision: {val_precision:.4f}, '
-          f'Val Recall: {val_recall:.4f}, Val F1: {val_f1:.4f}')
-
-    torch.cuda.empty_cache()
-    # scheduler.step()
-
-    # Early stopping
-    # if val_loss < best_val_loss:
-    #     best_val_loss = val_loss
-    #     patience_counter = 0
-    #     torch.save(model_LSTM.state_dict(), 'best_model.pth')  # Save the best model
-    # else:
-    #     patience_counter += 1
-
-    # if patience_counter >= patience:
-    #     print("Early stopping triggered")
-    #     break
-
-# Load the best model
-model_LSTM.load_state_dict(torch.load('best_model.pth'))
-
-# Plot training and validation loss
-plt.figure(figsize=(10, 6))
-plt.plot(train_losses, label='Training Loss', color='blue')
-plt.plot(val_losses, label='Validation Loss', color='red', linestyle='--')
-plt.xlabel('Epoch')
-plt.ylabel('Loss')
-plt.title('Training and Validation Loss over Epochs')
-plt.legend()
-plt.grid(True)
-plt.savefig('training_validation_loss.png')
-plt.show()
-
-val_loss, val_accuracy, val_precision, val_recall, val_f1 = evaluate(model_LSTM, valid_loader, criterion)
-
-# Calculate ROC AUC
-model_LSTM.eval()
-all_predictions = []
-all_labels = []
-
-with torch.no_grad():
-    for inputs, labels in valid_loader:
-        inputs, labels = inputs.to(device), labels.to(device)
-        outputs = model_LSTM(inputs)
-        probabilities = torch.sigmoid(outputs)
-        all_predictions.extend(probabilities.cpu().numpy())
-        all_labels.extend(labels.cpu().numpy())
-
-roc_auc = roc_auc_score(all_labels, all_predictions)
-
-print(f'Final Validation Results - Loss: {val_loss:.4f}, Accuracy: {val_accuracy:.4f}, '
-      f'Precision: {val_precision:.4f}, Recall: {val_recall:.4f}, F1: {val_f1:.4f}, ROC AUC: {roc_auc:.4f}')
-conf_matrix = confusion_matrix(all_labels, (np.array(all_predictions) > 0.5).astype(int))
-disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix)
-disp.plot(cmap=plt.cm.Blues)
-plt.title('Confusion Matrix')
-plt.savefig('confusion_matrix.png')
-plt.show()
+plot_confusion(check)
