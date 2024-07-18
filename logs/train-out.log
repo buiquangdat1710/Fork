@@ -24,3 +24,13 @@
 2024-07-18 10:27 +07:00: Epoch [15/200], Train Loss: 0.6274, Train Accuracy: 0.6098, Val Loss: 0.6542, Val Accuracy: 0.6011, Val Precision: 0.6039, Val Recall: 0.3644, Val F1: 0.4545
 2024-07-18 10:37 +07:00: Epoch [16/200], Train Loss: 0.6234, Train Accuracy: 0.6084, Val Loss: 0.6602, Val Accuracy: 0.6061, Val Precision: 0.6212, Val Recall: 0.3491, Val F1: 0.4470
 2024-07-18 10:48 +07:00: Epoch [17/200], Train Loss: 0.6195, Train Accuracy: 0.6170, Val Loss: 0.6493, Val Accuracy: 0.5893, Val Precision: 0.5530, Val Recall: 0.5191, Val F1: 0.5356
+2024-07-18 11:00 +07:00: Epoch [18/200], Train Loss: 0.6170, Train Accuracy: 0.6166, Val Loss: 0.6709, Val Accuracy: 0.5965, Val Precision: 0.5595, Val Recall: 0.5421, Val F1: 0.5507
+2024-07-18 11:13 +07:00: Epoch [19/200], Train Loss: 0.6121, Train Accuracy: 0.6222, Val Loss: 0.6648, Val Accuracy: 0.6081, Val Precision: 0.6177, Val Recall: 0.3692, Val F1: 0.4622
+2024-07-18 11:26 +07:00: Epoch [20/200], Train Loss: 0.6123, Train Accuracy: 0.6230, Val Loss: 0.6553, Val Accuracy: 0.5954, Val Precision: 0.5746, Val Recall: 0.4345, Val F1: 0.4948
+2024-07-18 11:39 +07:00: Epoch [21/200], Train Loss: 0.6045, Train Accuracy: 0.6293, Val Loss: 0.6670, Val Accuracy: 0.6062, Val Precision: 0.6068, Val Recall: 0.3881, Val F1: 0.4735
+2024-07-18 11:52 +07:00: Epoch [22/200], Train Loss: 0.6027, Train Accuracy: 0.6298, Val Loss: 0.6696, Val Accuracy: 0.5925, Val Precision: 0.5510, Val Recall: 0.5752, Val F1: 0.5628
+2024-07-18 12:06 +07:00: Epoch [23/200], Train Loss: 0.6014, Train Accuracy: 0.6298, Val Loss: 0.6824, Val Accuracy: 0.5971, Val Precision: 0.5819, Val Recall: 0.4139, Val F1: 0.4837
+2024-07-18 12:19 +07:00: Epoch [24/200], Train Loss: 0.6039, Train Accuracy: 0.6286, Val Loss: 0.6718, Val Accuracy: 0.5926, Val Precision: 0.5600, Val Recall: 0.4986, Val F1: 0.5275
+2024-07-18 12:32 +07:00: Epoch [25/200], Train Loss: 0.5936, Train Accuracy: 0.6405, Val Loss: 0.6542, Val Accuracy: 0.6050, Val Precision: 0.6193, Val Recall: 0.3474, Val F1: 0.4451
+2024-07-18 12:45 +07:00: Epoch [26/200], Train Loss: 0.5854, Train Accuracy: 0.6479, Val Loss: 0.6765, Val Accuracy: 0.5982, Val Precision: 0.6959, Val Recall: 0.2112, Val F1: 0.3241
+2024-07-18 12:56 +07:00: Epoch [27/200], Train Loss: 0.5874, Train Accuracy: 0.6476, Val Loss: 0.6738, Val Accuracy: 0.5974, Val Precision: 0.6629, Val Recall: 0.2386, Val F1: 0.3509
