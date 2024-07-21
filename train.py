@@ -1,21 +1,13 @@
 import re
-import os
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments, AutoModel
 from datasets import Dataset, load_dataset
 import pandas as pd
 import numpy as np
 import random
-from sklearn.model_selection import train_test_split
 import pandas as pd
-from datasets import Dataset, DatasetDict
-import torch.nn as nn
-import torch
-import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
-import seaborn as sns
 
-
+from transformers import Trainer, TrainingArguments, DataCollatorWithPadding
 
 seed = 42
 random.seed(seed)
@@ -26,7 +18,8 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-print("Using device: ", device)
+
+
 model_ckpt_c = 'neulab/codebert-c'
 model_ckpt_cpp = 'neulab/codebert-cpp'
 model_ckpt_t5 = 'Salesforce/codet5p-110m-embedding'
@@ -36,7 +29,7 @@ model_roberta = 'FacebookAI/roberta-base'
 model_name = model_ckpt_cpp
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-model = AutoModel.from_pretrained(model_name, trust_remote_code=True).to(device)
+
 file_path = 'full_data.csv'
 data = pd.read_csv(file_path)
 print(len(data))
@@ -46,7 +39,7 @@ print(data['label'].value_counts())
 
 comment_regex = r'(//[^\n]*|\/\*[\s\S]*?\*\/)'
 newline_regex = '\n{1,}'
-whitespace_regex = r"\s{2,}"
+whitespace_regex = '\s{2,}'
 
 def data_cleaning(inp, pat, rep):
     return re.sub(pat, rep, inp)
@@ -58,6 +51,8 @@ data['truncated_code'] = (data['code'].apply(data_cleaning, args=(comment_regex,
 # remove all data points that have more than 15000 characters
 length_check = np.array([len(x) for x in data['truncated_code']]) > 15000
 data = data[~length_check]
+
+from sklearn.model_selection import train_test_split
 X_train, X_test_valid, y_train, y_test_valid = train_test_split(data.loc[:, data.columns != 'label'],
                                                                 data['label'],
                                                                 train_size=0.8,
@@ -67,6 +62,8 @@ X_test, X_valid, y_test, y_valid = train_test_split(X_test_valid.loc[:, X_test_v
                                                     y_test_valid,
                                                     test_size=0.5,
                                                     stratify=y_test_valid)
+
+
 data_train = X_train
 data_train['label'] = y_train
 data_test = X_test
@@ -74,10 +71,13 @@ data_test['label'] = y_test
 data_valid = X_valid
 data_valid['label'] = y_valid
 
+from datasets import Dataset, DatasetDict
+#dts = Dataset.from_pandas(data)
 dts = DatasetDict()
 dts['train'] = Dataset.from_pandas(data_train)
 dts['test'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
 dts['valid'] = Dataset.from_pandas(data_test[:256])
+
 
 def tokenizer_func(examples):
     result = tokenizer(examples['truncated_code'])
@@ -85,12 +85,14 @@ def tokenizer_func(examples):
 
 dts = dts.map(tokenizer_func,
              batched=True,
-             batch_size=128
+             batch_size=4
              )
+
 
 dts.set_format('torch')
 dts.rename_column('label', 'labels')
-dts = dts.remove_columns(['code', 'truncated_code', '__index_level_0__'])    
+dts = dts.remove_columns(['code', 'truncated_code', '__index_level_0__'])
+
 
 import torch.nn as nn
 import torch
@@ -108,7 +110,6 @@ class PositionalEncoding(nn.Module):
         chunk_size, B, d_model = x.shape
         position_ids = torch.arange(0, chunk_size, dtype=torch.int).unsqueeze(1).to(device)
         position_enc = self.pos_encoding(position_ids) # (chunk_size, 1, d_model)
-    
         position_enc = position_enc.expand(chunk_size, B, d_model)
 
         # Add positional encoding to the input token embeddings
@@ -213,7 +214,7 @@ class CodeBertModel(nn.Module):
                                                 attention_mask = chunked_attention_mask)['pooler_output'] # (B * num_chunk, self.embedding_model.config.hidden_dim)
                                .view(num_chunk, B, -1) # (num_chunk, B, self.embedding_model.config.hidden_dim)
                           )
-        
+
 #         embedded_chunks = (self.embedding_model(input_ids = chunked_input_ids,
 #                                                 attention_mask = chunked_attention_mask) # (B * num_chunk, self.embedding_model.config.hidden_dim)
 #                                .view(num_chunk, B, -1) # (num_chunk, B, self.embedding_model.config.hidden_dim)
@@ -241,29 +242,28 @@ def compute_metrics(eval_pred):
             'recall': recall_score(y_true, y_pred),
             'f1': f1_score(y_true, y_pred)}
 
-model = CodeBertModel(model_ckpt = model_codesage_small, max_seq_length=512, chunk_size = 512, num_heads=8)
+model = CodeBertModel(model_ckpt = model_name, max_seq_length=512, chunk_size = 512, num_heads=4,)
 
-from transformers import Trainer, TrainingArguments, DataCollatorWithPadding
+
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
-training_arguments = TrainingArguments(
-    output_dir = './outputs/',
-    eval_strategy = 'epoch',
-    per_device_train_batch_size = 64,  # Reduced batch size
-    per_device_eval_batch_size = 64,   # Reduced batch size
-    gradient_accumulation_steps = 1,   # Reduced from 12
-    learning_rate = 3e-5,
-    num_train_epochs = 200,
-    warmup_ratio = 0.1,
-    lr_scheduler_type = 'cosine',
-    logging_strategy = 'steps',
-    logging_steps = 10,
-    save_strategy = 'no',
-    fp16 = False,  # Disabled mixed precision
-    metric_for_best_model = 'recall',
-    optim = 'adamw_torch',
-    report_to = 'none'
-)
+training_arguments = TrainingArguments(output_dir = 'output_dir',
+                                      evaluation_strategy = 'epoch',
+                                      per_device_train_batch_size = 1,
+                                      per_device_eval_batch_size = 1,
+                                      gradient_accumulation_steps = 12,
+                                      learning_rate = 3e-5,
+                                      num_train_epochs = 200,
+                                      warmup_ratio = 0.1,
+                                      lr_scheduler_type = 'cosine',
+                                      logging_strategy = 'steps',
+                                      logging_steps = 10,
+                                      save_strategy = 'no',
+                                      fp16 = True,
+                                      metric_for_best_model = 'recall',
+                                      optim = 'adamw_torch',
+                                      report_to = 'none'
+                                      )
 trainer = Trainer(model=model,
                   data_collator=data_collator,
                   args=training_arguments,
@@ -272,9 +272,10 @@ trainer = Trainer(model=model,
                   compute_metrics=compute_metrics,
                  )
 
-trainer.train()
 
-torch.save(torch.save(model.state_dict(), 'best_model.pth'))
+
+
+trainer.train()
 
 check = trainer.predict(dts['test'])
 
@@ -291,7 +292,10 @@ def plot_confusion(eval_pred):
     plt.ylabel('Actual Labels')
     plt.title('Confusion Matrix')
     plt.show()
-    
 
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
 
 plot_confusion(check)
