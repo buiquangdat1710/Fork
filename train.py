@@ -5,6 +5,10 @@ from datasets import Dataset, load_dataset
 import pandas as pd
 import numpy as np
 import random
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import os
 
 seed = 42
 random.seed(seed)
@@ -72,8 +76,8 @@ from datasets import Dataset, DatasetDict
 #dts = Dataset.from_pandas(data)
 dts = DatasetDict()
 dts['train'] = Dataset.from_pandas(data_train)
-dts['test'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
-dts['valid'] = Dataset.from_pandas(data_test[:256])
+dts['test'] = Dataset.from_pandas(data_test)
+dts['valid'] = Dataset.from_pandas(data_valid)
 
 
 def tokenizer_func(examples):
@@ -241,11 +245,16 @@ def compute_metrics(eval_pred):
 
 model = CodeBertModel(model_ckpt = model_name, max_seq_length=512, chunk_size = 512, num_heads=4,)
 
+# checkpoint_dir = '/home/naver/Individual/Extened/CodeSage/modelsave/checkpoint-27200' # đổi tên checkpoint thành số cao nhất trong file modelsave
+
+# if os.path.exists(checkpoint_dir):
+#     print("Loading model.......")
+#     model.load_state_dict(torch.load(os.path.join(checkpoint_dir, 'pytorch_model.bin')))
+
 from transformers import Trainer, TrainingArguments, DataCollatorWithPadding
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
 
-import os
 
 directory = "modelsave"
 
@@ -254,8 +263,8 @@ if not os.path.exists(directory):
 
 training_arguments = TrainingArguments(output_dir = './modelsave',
                                       evaluation_strategy = 'epoch',
-                                      per_device_train_batch_size = 1,
-                                      per_device_eval_batch_size = 1,
+                                      per_device_train_batch_size = 2,
+                                      per_device_eval_batch_size = 2,
                                       gradient_accumulation_steps = 12,
                                       learning_rate = 3e-5,
                                       num_train_epochs = 50,
@@ -276,7 +285,6 @@ trainer = Trainer(model=model,
                   train_dataset=dts['train'],
                   eval_dataset=dts['valid'],
                   compute_metrics=compute_metrics,
-                  callbacks=[EarlyStoppingCallback(early_stopping_patience=6)],
                  )
 
 
@@ -286,7 +294,7 @@ trainer.train()
 
 check = trainer.predict(dts['test'])
 
-compute_metrics(check)
+print(compute_metrics(check))
 
 def plot_confusion(eval_pred):
     y_pred, y_true = np.argmax(eval_pred.predictions, -1), eval_pred.label_ids
@@ -300,9 +308,5 @@ def plot_confusion(eval_pred):
     plt.title('Confusion Matrix')
     plt.show()
 
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
-import seaborn as sns
 
 plot_confusion(check)
