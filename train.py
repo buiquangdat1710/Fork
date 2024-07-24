@@ -50,7 +50,8 @@ data['truncated_code'] = (data['code'].apply(data_cleaning, args=(comment_regex,
                                       .apply(data_cleaning, args=(whitespace_regex, ' '))
                          )
 # remove all data points that have more than 15000 characters
-
+length_check = np.array([len(x) for x in data['truncated_code']]) > 15000
+data = data[~length_check]
 
 from sklearn.model_selection import train_test_split
 X_train, X_test_valid, y_train, y_test_valid = train_test_split(data.loc[:, data.columns != 'label'],
