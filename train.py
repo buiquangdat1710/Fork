@@ -27,7 +27,7 @@ model_ckpt_t5 = 'Salesforce/codet5p-110m-embedding'
 model_ckpt_unixcoder = 'microsoft/unixcoder-base'
 model_codesage_small = 'codesage/codesage-small'
 model_roberta = 'FacebookAI/roberta-base'
-model_name = model_ckpt_cpp
+model_name = model_ckpt_t5
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 
@@ -50,8 +50,7 @@ data['truncated_code'] = (data['code'].apply(data_cleaning, args=(comment_regex,
                                       .apply(data_cleaning, args=(whitespace_regex, ' '))
                          )
 # remove all data points that have more than 15000 characters
-length_check = np.array([len(x) for x in data['truncated_code']]) > 15000
-data = data[~length_check]
+
 
 from sklearn.model_selection import train_test_split
 X_train, X_test_valid, y_train, y_test_valid = train_test_split(data.loc[:, data.columns != 'label'],
@@ -76,9 +75,9 @@ from datasets import Dataset, DatasetDict
 #dts = Dataset.from_pandas(data)
 dts = DatasetDict()
 dts['train'] = Dataset.from_pandas(data_train)
-dts['test'] = Dataset.from_pandas(data_test)
-dts['valid'] = Dataset.from_pandas(data_valid)
-
+dts['test'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
+dts['valid'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
+print(dts)
 
 def tokenizer_func(examples):
     result = tokenizer(examples['truncated_code'])
@@ -245,11 +244,11 @@ def compute_metrics(eval_pred):
 
 model = CodeBertModel(model_ckpt = model_name, max_seq_length=512, chunk_size = 512, num_heads=4,)
 
-# checkpoint_dir = '/home/naver/Individual/Extened/CodeSage/modelsave/checkpoint-27200' # đổi tên checkpoint thành số cao nhất trong file modelsave
+checkpoint_dir = './modelsave/checkpoint-66'
 
-# if os.path.exists(checkpoint_dir):
-#     print("Loading model.......")
-#     model.load_state_dict(torch.load(os.path.join(checkpoint_dir, 'pytorch_model.bin')))
+if os.path.exists(checkpoint_dir):
+    print("Loading model.......")
+    model.load_state_dict(torch.load(os.path.join(checkpoint_dir, 'pytorch_model.bin')))
 
 from transformers import Trainer, TrainingArguments, DataCollatorWithPadding
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
@@ -263,8 +262,8 @@ if not os.path.exists(directory):
 
 training_arguments = TrainingArguments(output_dir = './modelsave',
                                       evaluation_strategy = 'epoch',
-                                      per_device_train_batch_size = 2,
-                                      per_device_eval_batch_size = 2,
+                                      per_device_train_batch_size = 1,
+                                      per_device_eval_batch_size = 1,
                                       gradient_accumulation_steps = 12,
                                       learning_rate = 3e-5,
                                       num_train_epochs = 50,
