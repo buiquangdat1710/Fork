@@ -394,7 +394,11 @@ def compute_metrics(eval_pred):
             'precision': precision_score(y_true, y_pred),
             'recall': recall_score(y_true, y_pred),
             'f1': f1_score(y_true, y_pred)}
-model = CodeBertModel(model_ckpt=model_name, max_seq_length=512, chunk_size=512, num_heads=4)  # Increased heads
+model = CodeBertModel(model_ckpt=model_name, max_seq_length=512, chunk_size=512, num_heads=4)
+if torch.cuda.device_count() > 1:
+    model = nn.DataParallel(model)
+model.to(device)
+
 from transformers import DataCollatorWithPadding
 import os
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
@@ -405,9 +409,9 @@ if not os.path.exists(directory):
 
 training_arguments = TrainingArguments(output_dir = './modelsave',
                                       evaluation_strategy = 'epoch',
-                                      per_device_train_batch_size = 1,
-                                      per_device_eval_batch_size = 1,
-                                      gradient_accumulation_steps = 12,
+                                      per_device_train_batch_size = 2,
+                                      per_device_eval_batch_size = 2,
+                                      gradient_accumulation_steps = 8,
                                       learning_rate = 3e-5,
                                       num_train_epochs = 50,
                                       warmup_ratio = 0.1,
