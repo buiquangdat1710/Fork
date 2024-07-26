@@ -8,3 +8,6 @@ conda activate agent
 echo "Training the model"
 
 python train.py
+
+git commit -m "Update log file"
+git push origin main
