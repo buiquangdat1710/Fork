@@ -1,19 +1,16 @@
 import re
-import os
 import torch
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments, AutoModel
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments, AutoModel,EarlyStoppingCallback
 from datasets import Dataset, load_dataset
 import pandas as pd
 import numpy as np
 import random
-from sklearn.model_selection import train_test_split
-import pandas as pd
-from datasets import Dataset, DatasetDict
-import torch.nn as nn
-import torch
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
+import os
+from datasets import Dataset, DatasetDict
+
 
 seed = 42
 random.seed(seed)
@@ -24,22 +21,29 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-print("Using device: ", device)
+
+
 model_ckpt_c = 'neulab/codebert-c'
 model_ckpt_cpp = 'neulab/codebert-cpp'
 model_ckpt_t5 = 'Salesforce/codet5p-110m-embedding'
 model_ckpt_unixcoder = 'microsoft/unixcoder-base'
 model_codesage_small = 'codesage/codesage-small'
 model_roberta = 'FacebookAI/roberta-base'
-model_name = model_ckpt_t5 
+model_name = model_ckpt_t5
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-file_path = 'full_data.csv'
-data = pd.read_csv(file_path)
-print(len(data))
-data = data[['code', 'label']]
-data['label'].value_counts()
-print(data['label'].value_counts())
+from datasets import Dataset, DatasetDict
+dts = load_dataset("claudios/ReVeal")
+
+def rename_column(example):
+    example['truncated_code'] = example['functionSource']
+    return example
+def tokenizer_func(examples):
+    result = tokenizer(examples['truncated_code'])
+    return result
+
+
+dts = dts.map(rename_column, remove_columns=['functionSource'])
 
 comment_regex = r'(//[^\n]*|\/\*[\s\S]*?\*\/)'
 newline_regex = '\n{1,}'
@@ -48,65 +52,56 @@ whitespace_regex = '\s{2,}'
 def data_cleaning(inp, pat, rep):
     return re.sub(pat, rep, inp)
 
-data['truncated_code'] = (data['code'].apply(data_cleaning, args=(comment_regex, ''))
-                                      .apply(data_cleaning, args=(newline_regex, ' '))
-                                      .apply(data_cleaning, args=(whitespace_regex, ' '))
-                         )
-length_check = np.array([len(x) for x in data['truncated_code']]) > 15000
-data = data[~length_check]
-X_train, X_test_valid, y_train, y_test_valid = train_test_split(data.loc[:, data.columns != 'label'],
-                                                                data['label'],
-                                                                train_size=0.8,
-                                                                stratify=data['label']
-                                                               )
-X_test, X_valid, y_test, y_valid = train_test_split(X_test_valid.loc[:, X_test_valid.columns != 'label'],
-                                                    y_test_valid,
-                                                    test_size=0.2,
-                                                    stratify=y_test_valid)
-data_train = X_train
-data_train['label'] = y_train
-data_test = X_test
-data_test['label'] = y_test
-data_valid = X_valid
-data_valid['label'] = y_valid
+def clean_code(example):
+    code = example['truncated_code']
+    code = data_cleaning(code, comment_regex, '')
+    code = data_cleaning(code, newline_regex, ' ')
+    code = data_cleaning(code, whitespace_regex, ' ')
+    example['truncated_code'] = code
+    return example
+dts = dts.map(clean_code)
 
-dts = DatasetDict()
-dts['train'] = Dataset.from_pandas(data_train)
-dts['test'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
-dts['valid'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
+def filter_func(example):
+    return len(example['truncated_code']) <= 15000
 
-def tokenizer_func(examples):
-    result = tokenizer(examples['truncated_code'], max_length=512, padding='max_length', truncation=True)
-    return result
+# Apply the filter to the dataset based on the length of truncated_code
+dts = dts.filter(filter_func)
 
 dts = dts.map(tokenizer_func,
              batched=True,
              batch_size=4
              )
 
+
 dts.set_format('torch')
-dts.rename_column('label', 'labels')
-dts = dts.remove_columns(['code', 'truncated_code', '__index_level_0__'])
+dts = dts.remove_columns(['hash', 'project', 'size', 'truncated_code'])
+
+
+
 
 import torch.nn as nn
 import torch
 from transformers import AutoModel
-
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model, max_len, dropout=0.1, padding_idx=0):
         super().__init__()
         self.dropout = nn.Dropout(p=dropout)
+
+        # define embedding layers for encoding positions
         self.pos_encoding = nn.Embedding(max_len, d_model, padding_idx=padding_idx)
 
     def forward(self, x):
         device = x.device
         chunk_size, B, d_model = x.shape
         position_ids = torch.arange(0, chunk_size, dtype=torch.int).unsqueeze(1).to(device)
-        position_enc = self.pos_encoding(position_ids).expand(chunk_size, B, d_model)
+        position_enc = self.pos_encoding(position_ids) # (chunk_size, 1, d_model)
+        position_enc = position_enc.expand(chunk_size, B, d_model)
+
+        # Add positional encoding to the input token embeddings
         x = x + position_enc
         x = self.dropout(x)
-        return x
 
+        return x
 class CodeBertModel(nn.Module):
     def __init__(self,
                  max_seq_length: int = 512,
@@ -143,6 +138,7 @@ class CodeBertModel(nn.Module):
                                  nn.Linear(embed_dim, 2)
                                  )
         self.chunk_size = chunk_size
+        self.embedding_model.gradient_checkpointing_enable()
 
     def prepare_chunk(self, input_ids: torch.Tensor,
                             attention_mask: torch.Tensor,
@@ -223,6 +219,7 @@ class CodeBertModel(nn.Module):
 
         return {"logits": logits}
 
+
 from sklearn.metrics import precision_score, accuracy_score, recall_score, f1_score
 def compute_metrics(eval_pred):
     y_pred, y_true = np.argmax(eval_pred.predictions, -1), eval_pred.label_ids
@@ -230,23 +227,23 @@ def compute_metrics(eval_pred):
             'precision': precision_score(y_true, y_pred),
             'recall': recall_score(y_true, y_pred),
             'f1': f1_score(y_true, y_pred)}
-model = CodeBertModel(model_ckpt=model_name, max_seq_length=512, chunk_size=512, num_heads=4)
-if torch.cuda.device_count() > 1:
-    model = nn.DataParallel(model)
-model.to(device)
 
-from transformers import DataCollatorWithPadding
-import os
+model = CodeBertModel(model_ckpt = model_name, max_seq_length=512, chunk_size = 512, num_heads=4)
+
+from transformers import Trainer, TrainingArguments, DataCollatorWithPadding
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
+
+
 directory = "modelsave"
+
 if not os.path.exists(directory):
     os.makedirs(directory)
 
 training_arguments = TrainingArguments(output_dir = './modelsave',
                                       evaluation_strategy = 'epoch',
-                                      per_device_train_batch_size = 2,
-                                      per_device_eval_batch_size = 2,
+                                      per_device_train_batch_size = 5,
+                                      per_device_eval_batch_size = 5,
                                       gradient_accumulation_steps = 12,
                                       learning_rate = 3e-5,
                                       num_train_epochs = 50,
@@ -256,19 +253,22 @@ training_arguments = TrainingArguments(output_dir = './modelsave',
                                       logging_steps = 10,
                                       save_strategy = 'no',
                                       fp16 = True,
-                                      metric_for_best_model = 'recall',
+                                      metric_for_best_model = 'accuracy',
                                       optim = 'adamw_torch',
                                       report_to = 'none',
                                       )
+
+
+
+# Use the custom trainer
 trainer = Trainer(model=model,
                   data_collator=data_collator,
                   args=training_arguments,
                   train_dataset=dts['train'],
-                  eval_dataset=dts['valid'],
+                  eval_dataset=dts['validation'],
                   compute_metrics=compute_metrics,
                  )
 trainer.train()
-
 check = trainer.predict(dts['test'])
 
 print(compute_metrics(check))
