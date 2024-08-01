@@ -58,26 +58,21 @@ data['truncated_code'] = (data['code'].apply(data_cleaning, args=(comment_regex,
                          )
 length_check = np.array([len(x) for x in data['truncated_code']]) > 15000
 data = data[~length_check]
-X_train, X_test_valid, y_train, y_test_valid = train_test_split(data.loc[:, data.columns != 'label'],
-                                                                data['label'],
-                                                                train_size=0.8,
-                                                                stratify=data['label']
-                                                               )
-X_test, X_valid, y_test, y_valid = train_test_split(X_test_valid.loc[:, X_test_valid.columns != 'label'],
-                                                    y_test_valid,
-                                                    test_size=0.2,
-                                                    stratify=y_test_valid)
-data_train = X_train
-data_train['label'] = y_train
-data_test = X_test
-data_test['label'] = y_test
-data_valid = X_valid
-data_valid['label'] = y_valid
 
+dfalse=data[data.label==0]
+dtrue=data[data.label==1]
+train_false, test_false = train_test_split(dfalse, test_size=0.2, shuffle=True)
+test_false, val_false = train_test_split(test_false, test_size=0.5, shuffle=True)
+train_true, test_true = train_test_split(dtrue, test_size=0.2, shuffle=True)
+test_true, val_true = train_test_split(test_true, test_size=0.5, shuffle=True)
+dtrain = pd.concat([train_false, train_true])
+dval = pd.concat([val_false, val_true])
+dtest = pd.concat([test_false, test_true])
 dts = DatasetDict()
-dts['train'] = Dataset.from_pandas(data_train)
-dts['test'] = Dataset.from_pandas(data_test)
-dts['valid'] = Dataset.from_pandas(data_valid)
+dts['train'] = Dataset.from_pandas(dtrain)
+dts['test'] = Dataset.from_pandas(dtest)
+dts['valid'] = Dataset.from_pandas(dval)
+
 
 def tokenizer_func(examples):
     result = tokenizer(examples['truncated_code'], max_length=512, padding='max_length', truncation=True)
