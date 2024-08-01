@@ -76,8 +76,8 @@ data_valid['label'] = y_valid
 
 dts = DatasetDict()
 dts['train'] = Dataset.from_pandas(data_train)
-dts['test'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
-dts['valid'] = Dataset.from_pandas(pd.concat([data_test, data_valid]))
+dts['test'] = Dataset.from_pandas(data_test)
+dts['valid'] = Dataset.from_pandas(data_valid)
 
 def tokenizer_func(examples):
     result = tokenizer(examples['truncated_code'], max_length=512, padding='max_length', truncation=True)
@@ -269,3 +269,21 @@ trainer = Trainer(model=model,
                   compute_metrics=compute_metrics,
                  )
 trainer.train()
+check = trainer.predict(dts['test'])
+
+print(compute_metrics(check))
+
+def plot_confusion(eval_pred):
+    y_pred, y_true = np.argmax(eval_pred.predictions, -1), eval_pred.label_ids
+    cm = confusion_matrix(y_true, y_pred)
+
+# Plot confusion matrix
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Negative', 'Positive'], yticklabels=['Negative', 'Positive'])
+    plt.xlabel('Predicted Labels')
+    plt.ylabel('Actual Labels')
+    plt.title('Confusion Matrix')
+    plt.show()
+
+
+plot_confusion(check)
