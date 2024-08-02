@@ -129,7 +129,7 @@ class CodeBertModel(nn.Module):
                                                    batch_first=False)
 
         self.transformer_encoder = nn.TransformerEncoder(encoder_layer=encoder_layer,
-                                                         num_layers=3,
+                                                         num_layers=4,
                                                          )
 
         self.positional_encoding = PositionalEncoding(max_len=max_seq_length,
