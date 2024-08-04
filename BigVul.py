@@ -125,7 +125,7 @@ class CodeBertModel(nn.Module):
                                                    batch_first=False)
 
         self.transformer_encoder = nn.TransformerEncoder(encoder_layer=encoder_layer,
-                                                         num_layers=8,
+                                                         num_layers=4,
                                                          )
 
         self.positional_encoding = PositionalEncoding(max_len=max_seq_length,
@@ -228,7 +228,7 @@ def compute_metrics(eval_pred):
             'precision': precision_score(y_true, y_pred),
             'recall': recall_score(y_true, y_pred),
             'f1': f1_score(y_true, y_pred)}
-model = CodeBertModel(model_ckpt=model_name, max_seq_length=512, chunk_size=512, num_heads=4)  # Increased heads
+model = CodeBertModel(model_ckpt=model_name, max_seq_length=512, chunk_size=512, num_heads=8)  # Increased heads
 from transformers import DataCollatorWithPadding
 import os
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
