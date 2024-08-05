@@ -33,11 +33,14 @@ model_codesage_small = 'codesage/codesage-small'
 model_roberta = 'FacebookAI/roberta-base'
 model_name = model_ckpt_t5
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-file_path = "/content/drive/MyDrive/Big_Vul.csv"
-data = pd.read_csv(file_path)
+from datasets import Dataset, DatasetDict
+file_path = "chrome_debian.json"
+data = pd.read_json(file_path)
+
+
 print(len(data))
-data['vul'].value_counts()
-print(data['vul'].value_counts())
+data = data[['code', 'label']]
+data['label'].value_counts()
 
 comment_regex = r'(//[^\n]*|\/\*[\s\S]*?\*\/)'
 newline_regex = '\n{1,}'
@@ -46,33 +49,27 @@ whitespace_regex = '\s{2,}'
 def data_cleaning(inp, pat, rep):
     return re.sub(pat, rep, inp)
 
-data['truncated_code'] = (data['vul_func_with_fix'].apply(data_cleaning, args=(comment_regex, ''))
+data['truncated_code'] = (data['code'].apply(data_cleaning, args=(comment_regex, ''))
                                       .apply(data_cleaning, args=(newline_regex, ' '))
                                       .apply(data_cleaning, args=(whitespace_regex, ' '))
                          )
-# remove all data points that have more than 15000 characters
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(data.loc[:, data.columns != 'vul'],
-                                                                data['vul'],
-                                                                train_size=0.8,
-                                                                stratify=data['vul']
-                                                               )
-
-
-data_train = X_train
-data_train['vul'] = y_train
-data_test = X_test
-data_test['vul'] = y_test
-from datasets import Dataset, DatasetDict
-#dts = Dataset.from_pandas(data)
+length_check = np.array([len(x) for x in data['truncated_code']]) > 15000
+data = data[~length_check]
+dfalse=data[data.label==0]
+dtrue=data[data.label==1]
+train_false, test_false = train_test_split(dfalse, test_size=0.2, shuffle=True)
+test_false, val_false = train_test_split(test_false, test_size=0.5, shuffle=True)
+train_true, test_true = train_test_split(dtrue, test_size=0.2, shuffle=True)
+test_true, val_true = train_test_split(test_true, test_size=0.5, shuffle=True)
+dtrain = pd.concat([train_false, train_true])
+dval = pd.concat([val_false, val_true])
+dtest = pd.concat([test_false, test_true])
 dts = DatasetDict()
-dts['train'] = Dataset.from_pandas(data_train)
-dts['test'] = Dataset.from_pandas(data_test)
+dts['train'] = Dataset.from_pandas(dtrain)
+dts['test'] = Dataset.from_pandas(dtest)
+dts['valid'] = Dataset.from_pandas(dval)
 
-dts = dts.remove_columns(['vul_func_with_fix'])
-dts = dts.remove_columns(['__index_level_0__'])
-dts["train"] = dts["train"].rename_column("vul", "target")
-dts["train"] = dts["train"].rename_column("truncated_code", "code")
+
 from datasets import load_dataset
 
 dts_realvu = load_dataset("realvul/RealVul")
