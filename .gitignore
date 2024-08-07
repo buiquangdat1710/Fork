@@ -2,10 +2,5 @@ modelsave/
 
 .env
 
-Big_Vul.csv
-
-chrome_debian.json
-
-full_data.csv
-
-Vers1_full_data.csv
+*.csv
+*.json
