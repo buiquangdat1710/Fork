@@ -36,6 +36,9 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 file_path = 'Diversevul.csv'
 data = pd.read_csv(file_path)
 data = data.rename(columns={'func': 'code', 'target': 'label'})
+data = data.dropna(subset=['label'])
+data['label'] = data['label'].astype(int)
+data['code'] = data['code'].astype(str)
 print(len(data))
 data = data[['code', 'label']]
 data['label'].value_counts()
