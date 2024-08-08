@@ -256,7 +256,7 @@ trainer = Trainer(model=model,
                   data_collator=data_collator,
                   args=training_arguments,
                   train_dataset=dts['train'],
-                  eval_dataset=dts['valid'],
+                  eval_dataset=dts['test'],
                   compute_metrics=compute_metrics,
                  )
 trainer.train()
